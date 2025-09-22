@@ -1,0 +1,16 @@
+name = "trello-comment-scheduler"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# KV Namespace binding
+[[kv_namespaces]]
+binding = "TRELLO_SCHEDULES"
+id = "YOUR_KV_NAMESPACE_ID"
+
+# Environment variables (set your Trello API key here)
+[vars]
+TRELLO_API_KEY = "YOUR_TRELLO_API_KEY"
+
+# Cron trigger - runs every minute
+[triggers]
+crons = ["* * * * *"]
