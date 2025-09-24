@@ -11,6 +11,17 @@ Schedule comments and card completion status changes in Trello. Post comments at
 - Cancel scheduled items before they execute
 - Visual indicators for scheduled items in card activity feed
 
+## Screenshots
+
+### Scheduling Buttons in Card
+![Scheduling buttons added to Trello cards](docs/images/card-buttons.png)
+
+### Schedule Dialog
+![Schedule dialog with time selection options](docs/images/schedule-dialog.png)
+
+### Scheduled Items in Activity Feed
+![Scheduled comments and status changes shown in activity feed](docs/images/scheduled-items-feed.png)
+
 ## How It Works
 
 1. **Chrome Extension** adds scheduling buttons to Trello interface

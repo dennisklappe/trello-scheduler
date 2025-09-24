@@ -27,11 +27,6 @@ Thumbs.db
 dist/
 build/
 
-# Chrome extension icons (if not included)
-*.png
-*.jpg
-*.jpeg
-
 # Backup files
 *.backup
 *.bak
