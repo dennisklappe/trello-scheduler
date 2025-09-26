@@ -25,7 +25,7 @@ Schedule comments and card completion status changes in Trello. Post comments at
 ## How It Works
 
 1. **Chrome Extension** adds scheduling buttons to Trello interface
-2. **Cloudflare Worker** stores scheduled items and processes them every minute
+2. **Cloudflare Worker** stores scheduled items and processes them every minute using an efficient minute-based index (no KV list operations)
 3. **Trello API** posts comments and updates cards at scheduled times
 
 ## Setup Guide
@@ -182,6 +182,11 @@ Manually trigger processing (for testing)
 - Token may have expired
 - Generate a new token and update localStorage
 - Ensure token has write permissions
+
+### Cloudflare KV rate limits
+- The worker uses a minute-based indexing systemto avoids KV list operations
+- If you see 429 errors, check your KV usage in Cloudflare dashboard
+- The free tier supports 100,000 reads, 1,000 writes, and 1,000 deletes per day
 
 ## Security Notes
 
